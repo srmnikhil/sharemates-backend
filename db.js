@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // enable this when using .env
-// require('dotenv').config();
-const mongoURI = "mongodb://localhost:27017/sharemates";
+require('dotenv').config();
+const mongoURI = process.env.DB_URL;
 
 const connectToMongo = () =>{
     mongoose.connect(mongoURI)
